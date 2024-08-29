@@ -1,4 +1,4 @@
 # Gradient-Generator
 <br>
 # Screenshot
-![Screenshot](desktop.png)
+![Screenshot] (desktop.png)
