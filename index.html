@@ -14,19 +14,19 @@
         <input type="color" id="color2" value="#ffff00">
         </div>
      <div class="buttons">
-        <button class="arrow" id="left"><i class="fas fa-arrow-left"></i></button>
-        <button class="arrow active" id="right"><i class="fas fa-arrow-right"></i></button>
-        <button class="arrow" id="up"><i class="fas fa-arrow-up"></i></button>
-        <button class="arrow" id="down"><i class="fas fa-arrow-down"></i></button>
-        <button class="arrow rot" id="up"><i class="fas fa-arrow-up"></i></button>
-        <button class="arrow rot" id="right"><i class="fas fa-arrow-right"></i></button>
-        <button class="arrow rot" id="down"><i class="fas fa-arrow-down"></i></button>
-        <button class="arrow rot" id="left"><i class="fas fa-arrow-left"></i></button>
+        <button class="arrow" id="left" onclick="setDirection('to left', this)"><i class="fas fa-arrow-left"></i></button>
+        <button class="arrow active" id="right" onclick="setDirection('to right', this)"><i class="fas fa-arrow-right"></i></button>
+        <button class="arrow" id="up" onclick="setDirection('to top', this)"><i class="fas fa-arrow-up"></i></button>
+        <button class="arrow" id="down" onclick="setDirection('to bottom', this)"><i class="fas fa-arrow-down"></i></button>
+        <button class="arrow rot" id="topRight" onclick="setDirection('to top right', this)"><i class="fas fa-arrow-up"></i></button>
+        <button class="arrow rot" id="bottomRight" onclick="setDirection('to bottom right', this)"><i class="fas fa-arrow-right"></i></button>
+        <button class="arrow rot" id="bottomLeft" onclick="setDirection('to bottom left',this)"><i class="fas fa-arrow-down"></i></button>
+        <button class="arrow rot" id="topLeft" onclick="setDirection('to top left',this)"><i class="fas fa-arrow-left"></i></button>
      </div>
-     <button id="generate">Generate</button>
+     <button type="submit" id="generate" onclick="generateCode()">Generate</button>
      <textarea id="css">background: linear-gradient(to right, #ff0000, #ffff00);</textarea>
-     <button id="copy">Copy</button>
+     <button id="copy" onclick="copyText()">Copy</button>
     </div>
-    
+    <script src="index.js"></script>
 </body>
 </html>
