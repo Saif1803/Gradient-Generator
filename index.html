@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Gradient Generator</title>
+    <title>Gradient Generator | AsmrProg</title>
 </head>
+
 <body>
+
     <div class="container">
-        <div class="colorbox">
-        <input type="color" id="color1" value="#ff0000">
-        <input type="color" id="color2" value="#ffff00">
+        <div class="colors">
+            <input type="color" id="color-a" value="#7986cb">
+            <input type="color" id="color-b" value="#1a237e">
         </div>
-     <div class="buttons">
-        <button class="arrow" id="left" onclick="setDirection('to left', this)"><i class="fas fa-arrow-left"></i></button>
-        <button class="arrow active" id="right" onclick="setDirection('to right', this)"><i class="fas fa-arrow-right"></i></button>
-        <button class="arrow" id="up" onclick="setDirection('to top', this)"><i class="fas fa-arrow-up"></i></button>
-        <button class="arrow" id="down" onclick="setDirection('to bottom', this)"><i class="fas fa-arrow-down"></i></button>
-        <button class="arrow rot" id="topRight" onclick="setDirection('to top right', this)"><i class="fas fa-arrow-up"></i></button>
-        <button class="arrow rot" id="bottomRight" onclick="setDirection('to bottom right', this)"><i class="fas fa-arrow-right"></i></button>
-        <button class="arrow rot" id="bottomLeft" onclick="setDirection('to bottom left',this)"><i class="fas fa-arrow-down"></i></button>
-        <button class="arrow rot" id="topLeft" onclick="setDirection('to top left',this)"><i class="fas fa-arrow-left"></i></button>
-     </div>
-     <button type="submit" id="generate" onclick="generateCode()">Generate</button>
-     <textarea id="css">background: linear-gradient(to right, #ff0000, #ffff00);</textarea>
-     <button id="copy" onclick="copyText()">Copy</button>
+        <div class="buttons">
+            <button onclick="setDirection('to top', this)">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <button class="active" onclick="setDirection('to bottom', this)">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button onclick="setDirection('to right', this)">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <button onclick="setDirection('to left', this)">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="rotate-icon" onclick="setDirection('to top right', this)">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <button class="rotate-icon" onclick="setDirection('to bottom left', this)">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="rotate-icon" onclick="setDirection('to bottom right', this)">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="rotate-icon" onclick="setDirection('to top left', this)">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+        <button id="submit" onclick="generateCode()">Generate</button>
+        <div class="output">
+            <textarea id="code" rows="2"></textarea>
+            <button id="copy" onclick="copyText()">Copy</button>
+        </div>
     </div>
+
     <script src="index.js"></script>
 </body>
+
 </html>
