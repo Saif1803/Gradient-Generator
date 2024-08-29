@@ -6,4 +6,4 @@ In this tutorial ([Open in Youtube](https://youtu.be/zUOunkcZcjI)),  I am gonna 
 # Screenshot
 Here we have project screenshot :
 
-![screenshot](desktop.png)
+![screenshot](Desktop.png)
