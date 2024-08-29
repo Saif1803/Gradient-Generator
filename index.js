@@ -1,22 +1,27 @@
-let colorOne = document.getElementById('color1');
-let colorTwo = document.getElementById('color2');
-let currentDirection = 'to right';
-let outputCode = document.getElementById('css');
+let colorOne = document.getElementById("color-a");
+let colorTwo = document.getElementById("color-b");
+let currentDirection = 'to bottom';
+let outputCode = document.getElementById("code");
 
 function setDirection(value, _this) {
-    let directions = document.querySelectorAll(".buttons button");
-    for (let i of directions) {
-        i.classList.remove('active');
+    let direcrtions = document.querySelectorAll(".buttons button");
+    for (let i of direcrtions) {
+        i.classList.remove("active");
     }
-    _this.classList.add('active');
+    _this.classList.add("active");
     currentDirection = value;
-    generateCode(); // Call generateCode() immediately after setting the direction
 }
 
 function generateCode() {
-    outputCode.value = `linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value});`;
-    document.body.style.backgroundImage = `linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value});`;
+    outputCode.value = `background-image: linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value})`;
+    document.getElementsByTagName("BODY")[0].style.backgroundImage = `linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value})`;
 }
 
-// Initial code generation
+function copyText() {
+    outputCode.select();
+    document.execCommand('copy');
+    alert("Gradient Copied!");
+}
+
+
 generateCode();
